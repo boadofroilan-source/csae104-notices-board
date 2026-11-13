@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(61, 49, 168);
+    border: 5px;
+    padding: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin: 50px;
+    line-height: 1.6;
+    border-style: groove;
+    margin: 50px;
+}
+#head{
+    margin: 100px;
+    padding-left: 50%;
+}
+p{
+    color: white;
+}
+img{
+    width: 500px;
+    height: 300px;
+}
+#msg{
+    background: #550634;
+    padding: 1rem;
+border-radius: 8px;
+}
+h1{
+    text-align: center;
+    color: tomato;
+}
+img {
+  float: right;
+  margin-left: 15px;
+  width: 200px;
+  height: 200px;  
+}
+.container {
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "menu content nav"
+  "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+.container > * {
+  background-color: white;
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+}
+.container .content {
+  grid-area: content;
+}
+.container div.nav {
+  grid-area: nav;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+a:hover{
+    color: red;
+    text-decoration: underline;
+    font-size: 25px;
+}
+.card{
+    padding: 1rem;
+}
+nav a{
+    color: pink;
+}
+#sentence1{
+    color: red;
+}
+.bg1{
+    background-color: pink;
+    border-radius: 10%;
+}
+.btn{
+    background-color: green;
+}
+.btn:hover{
+    color: rgb(5, 37, 41);
+    background-color: pink;
+}
+.root{
+    --brand: 1f7a5c;
+    --space: 1rem;
+}
+.btn{
+    background: var(--brand);
+    padding: var(--space);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Campus Notices</title>
+        <link rel="stylesheet" href="style.css"/>
+
+    </head>
+ <body>
+    <div class="container">
+        <div class="header"><h1>DMMMSU</h1></div>
+
+        <div class="menu"><h4>Charlie</h4><h4>Hydee</h4><h4>Nema</h4><h4>Jheck</h4><h4>Macon</h4><h4>Ara</h4></div>
+
+        <main class="content">
+            <p id="sentence1">This is Computer science paalam na sa ating lahat gusto ko na umuwi</p>
+            <p>The College of <strong>computer science</strong></p>
+            
+            <div class="note">
+                <p id="alert">Welcome</p>
+            </div>
+        </main>
+
+        <div class="nav">
+            <nav><a href="notices.html">Read Notices</a></nav>
+            <img src="image1.png" alt="A random place holder image"><br>
+            <form action="/api/notices" method="post">
+                <label for="title">Title</label>
+                <input id="title" name="title" type="text" required>
+                <label for="msg">Message</label>
+                <textarea id="msg" name="message"></textarea>
+                <button class="btn" type="submit">Post Notice</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <h4>Footer</h4>
+        </div>
+    </div>
+    </body>
+    
+</html>
