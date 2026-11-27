@@ -1,0 +1,198 @@
+:root {
+  --brand: #040275;
+  --brand-soft: #e0ecf8;
+  --brand-soft-green: #079cff;
+  --surface: #ffffff;
+  --page: #f4f7fa;
+  --text: green;
+  --border: #d9e2ec;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  background: var(--page);
+  /* A color set directly on a paragraph overrides this inherited color. */
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0 32px;
+  font-family: "Segoe UI", Arial, Geneva, Verdana, sans-serif;
+}
+header {
+  grid-area: header;
+  background: linear-gradient(110deg, var(--brand), var(--brand-soft-green) 65%, rgb(255, 251, 0));
+  color: solid rgb(204, 0, 0);
+  padding: 16px 24px;
+  border-bottom: 4px solid rgb(175, 0, 0);
+}
+img { max-width: 100%; height: auto; }
+table { display: block; overflow-x: auto; } /* a wide table scrolls inside itself */
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header h1 img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  border: 2px solid green;
+  border-radius: var(--radius);
+  background: white;
+}
+
+main {
+  grid-area: main;
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+aside {
+  grid-area: aside;
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.notice {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.tag {
+  background: var(--brand-soft);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 16px;
+}
+nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+nav li {
+     display: inline-block; 
+     margin-right: 16px; 
+}
+nav a { 
+    color: green;
+    text-decoration: none; 
+}
+nav a:hover { 
+    text-decoration: underline; 
+    text-shadow: green;
+    text-decoration-color: green; 
+}
+
+table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    background: var(--surface); 
+}
+th, td { 
+    border: 1px solid var(--border);
+     padding: 8px; 
+     text-align: left; 
+    }
+th { 
+    background: var(--brand-soft); 
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+}
+input:focus, select:focus, textarea:focus { outline: 3px solid var(--brand); }
+
+button {
+  background: var(--brand);
+  color: white;
+  border: 0;
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { background: #163b69; }
+/* Direct paragraph color overrides the body's inherited color, not by specificity or source order. */
+.notice > p:not(.meta) { color: red; }
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+main {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.notices {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;      /* phone: one column */
+}
+
+.notice { margin-bottom: 0; }      /* the grid gap now handles the spacing */
+@media (min-width: 600px) {
+  .notices { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .notices { grid-template-columns: repeat(3, 1fr); }
+  header { padding: 24px 32px; }
+}
+body { display: grid; gap: 16px; }
+
+@media (min-width: 960px) {
+  body {
+    grid-template-columns: 1fr 300px;
+    grid-template-areas:
+      "header header"
+      "main   aside"
+      "footer footer";
+  }
+  header { grid-area: header; }
+  main   { grid-area: main; }
+  aside  { grid-area: aside; }
+  footer { grid-area: footer; }
+}

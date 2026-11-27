@@ -1,10 +1,10 @@
 :root {
-  --brand: #034703;
+  --brand: #040275;
   --brand-soft: #e0ecf8;
-  --brand-soft-green: #078007;
+  --brand-soft-green: #079cff;
   --surface: #ffffff;
   --page: #f4f7fa;
-  --text: #1f2933;
+  --text: green;
   --border: #d9e2ec;
   --radius: 8px;
 }
@@ -33,10 +33,10 @@ body {
 }
 header {
   grid-area: header;
-  background: linear-gradient(110deg, var(--brand), var(--brand-soft-green) 65%, goldenrod);
-  color: goldenrod;
+  background: linear-gradient(110deg, var(--brand), var(--brand-soft-green) 65%, rgb(216, 22, 22));
+  color: solid green;
   padding: 16px 24px;
-  border-bottom: 4px solid goldenrod;
+  border-bottom: 4px solid green;
 }
 
 header h1 {
@@ -46,11 +46,11 @@ header h1 {
 }
 
 header h1 img {
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   flex: 0 0 auto;
-  border: 2px solid goldenrod;
+  border: 2px solid green;
   border-radius: var(--radius);
   background: white;
 }
@@ -99,13 +99,13 @@ nav li {
      margin-right: 16px; 
 }
 nav a { 
-    color: goldenrod;
+    color: green;
     text-decoration: none; 
 }
 nav a:hover { 
     text-decoration: underline; 
-    text-shadow: goldenrod;
-    text-decoration-color: goldenrod; 
+    text-shadow: green;
+    text-decoration-color: green; 
 }
 
 table { 
